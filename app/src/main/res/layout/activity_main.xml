@@ -6,18 +6,19 @@
     android:background="@color/white">
 
     <ImageView
-        android:id="@+id/imgTestTubes"
+        android:id="@+id/imgWeather"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/test_tubes" />
+        android:src="@drawable/icons8_weather_100"
+        android:contentDescription="@string/weather_app"/>
 
     <TextView
         android:id="@+id/helloText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/imgTestTubes"
+        android:layout_below="@id/imgWeather"
         android:textStyle="bold"
         android:text="@string/hello_world" />
 

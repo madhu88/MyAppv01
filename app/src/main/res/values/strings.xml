@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">Custom app name</string>
-    <string name="hello_world">Hello World!!!</string>
-    <string name="next">Next</string>
+    <string name="hello_world">Welcome to weather app</string>
+    <string name="next">Get weather</string>
     <string name="tool_bar_name">Main view</string>
+    <string name="title_activity_second">Weather Details</string>
+    <string name="under_dev">This activity is still under development</string>
+
+    <string name="weather_activity">Weather details</string>
+    <string name="time_column_header">Time</string>
+    <string name="temp_column_header">Temperature</string>
+    <string name="weather_app">Weather app</string>
 </resources>

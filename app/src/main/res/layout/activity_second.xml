@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/weatherAppHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/weather_activity"
+        android:paddingBottom="10dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <TableLayout
+        android:id="@+id/weatherTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_centerHorizontal="true">
+
+        <TableRow android:id="@+id/tableRowNames" android:background="@color/blue">
+            <TextView
+                android:id="@+id/timeColumnHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/time_column_header"
+                android:textColor="@color/black"
+                android:textAlignment="center"/>
+            <TextView
+                android:id="@+id/tempColumnHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/temp_column_header"
+                android:textColor="@color/black"
+                android:textAlignment="center"/>
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>
