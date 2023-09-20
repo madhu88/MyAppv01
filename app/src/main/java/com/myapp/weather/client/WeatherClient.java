@@ -19,21 +19,21 @@ import java.util.concurrent.Executors;
 
 import javax.net.ssl.HttpsURLConnection;
 
-public class WeatherTask implements Callable<WeatherResponse> {
+public class WeatherClient implements Callable<WeatherResponse> {
 
     WeatherResponse weatherResponse = null;
 
-    private static volatile WeatherTask INSTANCE;
+    private static volatile WeatherClient INSTANCE;
     private static final int NUMBER_OF_THREADS = 4;
 
     public static final ExecutorService weatherClientThread =
             Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
-    public static WeatherTask getWeatherTask() {
+    public static WeatherClient getWeatherClient() {
         if (INSTANCE == null) {
-            synchronized (WeatherTask.class) {
+            synchronized (WeatherClient.class) {
                 if (INSTANCE == null) {
-                    INSTANCE = new WeatherTask();
+                    INSTANCE = new WeatherClient();
                 }
             }
         }
