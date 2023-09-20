@@ -38,7 +38,8 @@ public class SecondActivity extends ComponentActivity {
             hourTextView.setText(weatherResponse.getHourly().getTime().get(i));
             hourTextView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
             tempTextView.setText(String.valueOf(
-                    weatherResponse.getHourly().getTemperature2m().get(i)));
+                    weatherResponse.getHourly().getTemperature2m().get(i))
+                    + weatherResponse.getHourlyUnits().getTemperature2m());
             tempTextView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
             tableRow.addView(hourTextView);
             tableRow.addView(tempTextView);
