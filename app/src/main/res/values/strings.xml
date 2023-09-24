@@ -10,4 +10,6 @@
     <string name="time_column_header">Time</string>
     <string name="temp_column_header">Temperature</string>
     <string name="weather_app">Weather app</string>
+
+    <string name="open_gmail">Open Gmail</string>
 </resources>

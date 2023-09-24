@@ -1,6 +1,7 @@
 package com.myapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,10 +20,20 @@ public class MainActivity1 extends ComponentActivity {
         super.onCreate(savedInstanceState);
         Log.d("in onCreate", "started app for first time");
         setContentView(R.layout.activity_main);
-        Button button = findViewById(R.id.nextButton);
-        button.setOnClickListener(view -> {
+        handleButtonClicks(savedInstanceState);
+    }
+
+    protected void handleButtonClicks(final Bundle savedInstanceState) {
+        Button nextButton = findViewById(R.id.nextButton);
+        nextButton.setOnClickListener(view -> {
             Intent intent = new Intent(this, SecondActivity.class);
             startActivity(intent, savedInstanceState);
+        });
+
+        Button openGamilButton = findViewById(R.id.openGmail);
+        openGamilButton.setOnClickListener(view -> {
+            Intent gmailIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://mail.google.com/"));
+            startActivity(gmailIntent);
         });
     }
 }
